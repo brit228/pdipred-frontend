@@ -16,6 +16,7 @@ function predictionReducer(state, action) {
   switch (action.type) {
     case 'PREDICT':
       const predictPromise = new Promise((resolve) => {
+        console.log(process.env.REACT_APP_BACKEND_URL+'/predict')
         fetch(process.env.REACT_APP_BACKEND_URL+'/predict', {
           method: 'POST',
           headers: {
