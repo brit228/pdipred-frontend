@@ -13,7 +13,7 @@ const Results = ({ drugs, proteins, predictions, predict, update, updateResults 
   return (
     <>
       <Row>
-        <Button onClick={() => {predict()}} style={{width:'100%'}}><h3>Predict</h3></Button>
+        <Button onClick={() => {predict()}} style={{width:'100%'}} disabled={update}><h3>Predict</h3></Button>
       </Row>
       {predictions.length > 0 ?
         <Row>
